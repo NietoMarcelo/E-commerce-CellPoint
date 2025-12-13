@@ -1,0 +1,9 @@
+@mixin basicFlexDirectionAlign($d-flex, $a-items) {
+    flex-direction: $d-flex;
+    align-items: $a-items;
+}
+
+@mixin basicFlexDirectionJustContent($d-flex, $j-cont) {
+    flex-direction: $d-flex;
+    justify-content: $j-cont;
+}

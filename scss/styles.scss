@@ -1,4 +1,6 @@
 @use "./utilities/variables" as var;
+@use "./utilities/extends";
+@use "./utilities/mixins" as m;
 
 * {
     padding: 0;
@@ -74,12 +76,7 @@ body {
         padding-bottom: 0.5rem;
     }
     button {
-        background: var.$color-violet;
-        color: #FFFFFF;
-        border: none;
-        padding: 0.5rem;
-        border-radius: 5px;
-        cursor: pointer;
+        @extend %primary-btn;
     }
 }
 
@@ -101,8 +98,7 @@ body {
 }
 
 .featured {
-    flex-direction: column;
-    align-items: center;
+    @include m.basicFlexDirectionAlign(column, center);
 }
 
 .product {
@@ -129,11 +125,7 @@ body {
         font-size: 0.9rem;
     }
     button {
-        color: var.$color-white;
-        background: var.$color-violet;
-        border: none;
-        border-radius: 5px;
-        padding: 0.7rem;
+        @extend %primary-btn;
         margin-top: 1rem;
     }
 }
@@ -141,8 +133,7 @@ body {
 /*      Categories      */
 
 .categories {
-    flex-direction: column;
-    align-items: center;
+    @include m.basicFlexDirectionAlign(column, center);
 }
 
 .categoryCard {
@@ -198,8 +189,7 @@ footer {
 }
 
 .footerMain {
-    flex-direction: column;
-    justify-content: flex-start;
+    @include m.basicFlexDirectionJustContent(column, flex-start);
     flex-wrap: wrap;
     gap: 0.5rem;
     article {
@@ -279,8 +269,7 @@ footer {
     }
 
     .footerMain {
-        flex-direction: row;
-        justify-content: flex-start;
+        @include m.basicFlexDirectionJustContent(row, flex-start);
         flex-wrap: wrap;
         gap: 0.5rem;
         article {
@@ -293,21 +282,18 @@ footer {
 
 @media (min-width: 748px) {
     .slider {
-        flex-direction: row;
-        justify-content: center;
+        @include m.basicFlexDirectionJustContent(row, center);
         gap: 2rem;
     }
 
     .featured {
-        flex-direction: row;
+        @include m.basicFlexDirectionJustContent(row, center);
         flex-wrap: wrap;
-        justify-content: center;
     }
 
     .categories {
-        flex-direction: row;
+        @include m.basicFlexDirectionJustContent(row, center);
         flex-wrap: wrap;
-        justify-content: center;
     }
 
     .product {
@@ -315,8 +301,7 @@ footer {
     }
 
     .footerMain {
-        flex-direction: row;
-        justify-content: center;
+        @include m.basicFlexDirectionJustContent(row, center);
         gap: none;
         article {
             width: 20rem;

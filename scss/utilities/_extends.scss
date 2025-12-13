@@ -1,0 +1,9 @@
+@use "./variables" as var;
+
+%primary-btn {
+    color: var.$color-white;
+    background: var.$color-violet;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
