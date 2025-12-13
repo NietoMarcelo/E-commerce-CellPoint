@@ -1,0 +1,92 @@
+@use "../utilities/variables" as var;
+@use "../utilities/mixins" as m;
+
+/*      between CellPhone/Tablet      */
+
+@media (min-width: 480px) {
+    .offersImage img {
+        max-width: 20rem;
+        height: auto;
+    }
+
+    .footerMain {
+        @include m.basicFlexDirectionJustContent(row, flex-start);
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        article {
+            width: 13rem;
+        }
+    }
+}
+
+/*      Tablet      */
+
+@media (min-width: 748px) {
+    .slider {
+        @include m.basicFlexDirectionJustContent(row, center);
+        gap: 2rem;
+    }
+
+    .featured {
+        @include m.basicFlexDirectionJustContent(row, center);
+        flex-wrap: wrap;
+    }
+
+    .categories {
+        @include m.basicFlexDirectionJustContent(row, center);
+        flex-wrap: wrap;
+    }
+
+    .product {
+        max-width: 20rem;
+    }
+
+    .footerMain {
+        @include m.basicFlexDirectionJustContent(row, center);
+        gap: none;
+        article {
+            width: 20rem;
+        }
+    }
+
+    .aboutMain {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "header header"
+            "left right";
+        ul {
+            padding: 0px;
+        }
+        h2 {
+            text-align: start;
+        }
+    }
+
+    .aboutLeft {
+        text-align: start;
+        padding-inline: 1rem;
+    }
+
+    .aboutRight {
+        padding-top: 0px;
+        text-align: start;
+        padding-inline: 1rem;
+    }
+}
+
+/*      Desktop      */
+
+@media (min-width: 1024px) {
+    .headerNavBar {
+        gap: 2rem;
+    }
+
+    .slider {
+        justify-content: none;
+    }
+
+    .footerMain article {
+        width: 13rem;
+    }
+}

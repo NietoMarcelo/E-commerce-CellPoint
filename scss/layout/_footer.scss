@@ -1,0 +1,46 @@
+@use "../utilities/variables" as var;
+@use "../utilities/mixins" as m;
+
+/*      Footer      */
+
+footer {
+    background: var.$color-black;
+    color: var.$color-white;
+    ul {
+        padding: 0px;
+    }
+    a {
+        text-decoration: none;
+        font-size: small;
+        color: var.$color-gray !important;
+        &:hover{
+            color: var.$color-violet !important;
+        }
+    }
+}
+
+.footerTop {
+    background: var.$color-black-footer;
+    text-align: center;
+    height: auto;
+    img {
+        height: 40px;
+        width: auto;
+        padding: 0.3rem;
+    }
+}
+
+.footerMain {
+    @include m.basicFlexDirectionJustContent(column, flex-start);
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    article {
+        width: 16rem;
+    }
+}
+
+.footerBottom {
+    background: var.$color-black-footer;
+    text-align: center;
+    height: auto;
+}
