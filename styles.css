@@ -84,11 +84,6 @@ hr {
     padding: 2rem;
     background-color: var(--color-white-blue);
     border-radius: 20px;
-    width: 100%;
-}
-
-.offersText {
-    width: 100%;
 }
 
 .offersText h2 {
@@ -114,7 +109,7 @@ hr {
 }
 
 .offersImage img {
-    width: 100%;
+    max-width: 13rem;
     height: auto;
 }
 
@@ -129,9 +124,11 @@ hr {
 
 .featured {
     flex-direction: column;
+    align-items: center;
 }
 
 .product {
+    width: 16rem;
     height: auto;
     padding: 1rem;
     margin: 1rem;
@@ -142,7 +139,7 @@ hr {
 }
 
 .product img {
-    width: 85%;
+    width: 13rem;
     height: auto;
     padding: 2rem;
 }
@@ -316,6 +313,11 @@ footer a:hover {
 }
 
 @media (min-width: 480px) {
+    .offersImage img {
+        max-width: 20rem;
+        height: auto;
+    }
+
     .footerMain {
         flex-direction: row;
         justify-content: flex-start;
@@ -324,7 +326,7 @@ footer a:hover {
     }
 
     .footerMain article {
-        width: 45%;
+        width: 13rem;
     }
 }
 
@@ -334,6 +336,7 @@ footer a:hover {
     .slider {
         flex-direction: row;
         justify-content: center;
+        gap: 2rem;
     }
 
     .featured {
@@ -359,7 +362,7 @@ footer a:hover {
     }
 
     .footerMain article {
-        width: 22%;
+        width: 20rem;
     }
 
     .aboutMain {
@@ -399,5 +402,9 @@ footer a:hover {
 
     .slider {
         justify-content: none;
+    }
+
+    .footerMain article {
+        width: 13rem;
     }
 }
