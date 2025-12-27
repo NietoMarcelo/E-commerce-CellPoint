@@ -1,0 +1,107 @@
+@use "../utilities/variables" as var;
+@use "../utilities/extends";
+@use "../utilities/mixins" as m;
+
+/*        MAIN         */
+
+.slider {
+    flex-direction: column;
+    padding: 2rem;
+    background-color: var.$color-blue-white;
+    border-radius: 20px;
+    h2 {
+        padding-bottom: 1rem;
+    }
+    p {
+        color: var.$color-gray;
+        padding-bottom: 0.5rem;
+    }
+    button {
+        @extend %primary-btn;
+    }
+}
+
+.offersImage {
+    padding-top: 1rem;
+    img {
+        max-width: 13rem;
+        height: auto;
+    }
+}
+
+/*      Featured        */
+
+.title {
+    text-align: center;
+    font-weight: 200;
+    font-size: x-large;
+    padding-top: 2rem;
+}
+
+.featured {
+    @include m.basicFlexDirectionAlign(column, center);
+}
+
+.product {
+    width: 16rem;
+    height: auto;
+    padding: 1rem;
+    margin: 1rem;
+    vertical-align: top;
+    text-align: center;
+    border-radius: 1rem;
+    border: 1px solid var.$color-gray;
+    img {
+        width: 13rem;
+        height: auto;
+        padding: 2rem;
+    }
+    h3 {
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+    }
+    p {
+        color: var.$color-gray;
+        padding-block: 0.1rem;
+        font-size: 0.9rem;
+    }
+    button {
+        @extend %primary-btn;
+        margin-top: 1rem;
+    }
+}
+
+/*      Categories      */
+
+.categories {
+    @include m.basicFlexDirectionAlign(column, center);
+}
+
+.categoryCard {
+    height: auto;
+    max-width: 20rem;
+    padding: 1rem;
+    margin: 1rem;
+    vertical-align: top;
+    text-align: center;
+    perspective: 20rem;
+    img {
+        width: 200px;
+        height: auto;
+        transition: transform 0.2s linear;
+        transform-style: preserve-3d;
+        &:hover {
+            transform: translateZ(40px);
+        }
+    }
+    h3 {
+        font-size: 1rem;
+        padding-top: 0.4rem;
+        margin-bottom: 0.4rem;
+    }
+    p {
+        color: var.$color-gray;
+        padding-block: 0.1rem;
+        font-size: 0.9rem;
+    }
+}

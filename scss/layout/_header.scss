@@ -1,0 +1,32 @@
+@use "../utilities/variables" as var;
+
+/*      Header       */
+
+.headerNavBar {
+    flex-direction: row;
+    a {
+        color: var.$color-blue;
+        text-decoration: none;
+        &:hover {
+            color: var.$color-pink;
+        }
+    }
+}
+
+.logoNav {
+    height: 3rem;
+    width: auto;
+    text-align: start;
+}
+
+.searchBtn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var.$color-pink;
+    color: var.$color-white;
+    border: none;
+    &:hover {
+        background: var.$color-pink-white;
+    }
+}

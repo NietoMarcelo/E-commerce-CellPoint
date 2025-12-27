@@ -1,0 +1,45 @@
+@use "./utilities/variables" as var;
+@use "./utilities/extends";
+@use "./utilities/mixins" as m;
+
+/*         LAYOUTS         */
+
+@use "./layout/header";
+@use "./layout/footer";
+@use "./layout/indexMain";
+@use "./layout/aboutUs";
+@use "./layout/products";
+
+/*         RESPONSIVE         */
+
+@use "./media-queries/mQueries";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var.$fuente-principal;
+    background-color: var.$color-white;
+
+    a {
+        color: inherit;     /* Con esto los textos link(href) ahora toman el color que les asigne */
+        text-decoration: none;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    h1, h2, h3, h4 {
+        font-family: var.$fuente-secundaria;
+    }
+
+    hr {
+        background: var.$color-violet;
+        height: 2px;
+        margin: 1rem 0;
+        border-radius: 20%;
+    }
+}
