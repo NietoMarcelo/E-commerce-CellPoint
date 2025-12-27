@@ -1,4 +1,4 @@
-.slider button, .product button {
+.productInProducts button, .slider button, .product button {
   color: #fff;
   background: #6C63FF;
   border: none;
@@ -157,10 +157,16 @@ footer a:hover {
   margin: 1rem;
   vertical-align: top;
   text-align: center;
+  perspective: 20rem;
 }
 .categoryCard img {
   width: 200px;
   height: auto;
+  transition: transform 0.2s linear;
+  transform-style: preserve-3d;
+}
+.categoryCard img:hover {
+  transform: translateZ(40px);
 }
 .categoryCard h3 {
   font-size: 1rem;
@@ -228,6 +234,56 @@ footer a:hover {
   color: #6C63FF;
 }
 
+ul {
+  color: #1E4E8C;
+}
+
+.active {
+  color: #E91E63;
+}
+
+.productsMain {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.featureds {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.productInProducts {
+  width: 11rem;
+  height: auto;
+  padding: 1rem;
+  margin: 1rem;
+  vertical-align: top;
+  text-align: center;
+  border-radius: 1rem;
+  border: 1px solid #555555;
+}
+.productInProducts img {
+  width: 8rem;
+  height: auto;
+  padding: 2rem;
+}
+.productInProducts h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+.productInProducts p {
+  color: #555555;
+  padding-block: 0.1rem;
+  font-size: 0.9rem;
+}
+.productInProducts button {
+  margin-top: 1rem;
+  font-size: small;
+}
+
 /*         RESPONSIVE         */
 /*      between CellPhone/Tablet      */
 @media (min-width: 480px) {
@@ -253,6 +309,11 @@ footer a:hover {
     gap: 2rem;
   }
   .featured {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .featureds {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
@@ -292,6 +353,10 @@ footer a:hover {
     padding-top: 0px;
     text-align: start;
     padding-inline: 1rem;
+  }
+  .productsMain {
+    grid-template-columns: 250px 1fr;
+    align-items: start;
   }
 }
 /*      Desktop      */

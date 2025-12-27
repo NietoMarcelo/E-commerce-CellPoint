@@ -84,9 +84,15 @@
     margin: 1rem;
     vertical-align: top;
     text-align: center;
+    perspective: 20rem;
     img {
         width: 200px;
         height: auto;
+        transition: transform 0.2s linear;
+        transform-style: preserve-3d;
+        &:hover {
+            transform: translateZ(40px);
+        }
     }
     h3 {
         font-size: 1rem;

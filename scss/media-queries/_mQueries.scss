@@ -32,6 +32,11 @@
         flex-wrap: wrap;
     }
 
+    .featureds {
+        @include m.basicFlexDirectionJustContent(row, center);
+        flex-wrap: wrap;
+    }
+
     .categories {
         @include m.basicFlexDirectionJustContent(row, center);
         flex-wrap: wrap;
@@ -72,6 +77,11 @@
         padding-top: 0px;
         text-align: start;
         padding-inline: 1rem;
+    }
+
+    .productsMain {
+        grid-template-columns: 250px 1fr;
+        align-items: start;
     }
 }
 
