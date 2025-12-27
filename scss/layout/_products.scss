@@ -2,11 +2,7 @@
 @use "../utilities/extends";
 @use "../utilities/mixins" as m;
 
-ul {
-    color: var.$color-blue;
-}
-
-.active {
+.activeLink {
     color: var.$color-pink;
 }
 
@@ -14,6 +10,9 @@ ul {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    ul {
+        color: var.$color-blue;
+    }
 }
 
 .featureds {

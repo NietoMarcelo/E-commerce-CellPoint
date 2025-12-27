@@ -234,11 +234,7 @@ footer a:hover {
   color: #6C63FF;
 }
 
-ul {
-  color: #1E4E8C;
-}
-
-.active {
+.activeLink {
   color: #E91E63;
 }
 
@@ -246,6 +242,9 @@ ul {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+}
+.productsMain ul {
+  color: #1E4E8C;
 }
 
 .featureds {
