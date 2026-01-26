@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Carrito de compras de CellPoint. Revisa tus productos seleccionados, modifica cantidades y finaliza tu compra de celulares y accesorios.">
+    <meta name="keywords" content="carrito, compras, celulares, accesorios, CellPoint, tienda online">
+    <meta name="author" content="CellPoint">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <title>Cell Point</title>
+    <title>Carrito de Compras - CellPoint</title>
 </head>
 <body>
 
@@ -36,7 +39,7 @@
                             <a href="aboutUs.html">Acerca de</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#">Sing In <i class="fa-solid fa-user"></i></a>
+                            <a href="singIn.html">Sing In <i class="fa-solid fa-user"></i></a>
                         </li>
                         <li class="nav-item">
                             <a href="cart.html">Carrito <i class="fa-solid fa-cart-shopping"></i></a>
@@ -45,11 +48,113 @@
                 </div>
             </div>
         </nav>
+
+        <!-- SEARCHBAR -->
+
+        <section class="bg-body-tertiary">
+            <div class="container-fluid">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar productos">
+                    <button class="searchBtn" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
     </header>
 
     <!-- MAIN -->
 
     <main>
+        <hr>
+        <h1 class="title fw-bold">Carrito de Compras</h1>
+        <hr>
+
+        <section class="cartMain">
+            <section class="cartItems">
+                <article class="cartItem">
+                    <div class="cartItemImage">
+                        <img src="./imagenes/motoE15.png" alt="Motorola moto E15">
+                    </div>
+                    <div class="cartItemInfo">
+                        <h3>Motorola moto E15 2+64Gb</h3>
+                        <p class="cartItemColor">Color: Negro</p>
+                        <p class="old-price">208,99</p>
+                        <p class="discount">9% OFF <span class="new-price">188,99</span></p>
+                    </div>
+                    <div class="cartItemQuantity">
+                        <button class="quantityBtn" aria-label="Disminuir cantidad">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <input type="number" value="1" min="1" class="quantityInput" aria-label="Cantidad">
+                        <button class="quantityBtn" aria-label="Aumentar cantidad">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="cartItemTotal">
+                        <p class="new-price">$188,99</p>
+                    </div>
+                    <div class="cartItemActions">
+                        <button class="removeBtn" aria-label="Eliminar producto">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="cartItem">
+                    <div class="cartItemImage">
+                        <img src="imagenes/iphone.png" alt="iPhone 15 Pro">
+                    </div>
+                    <div class="cartItemInfo">
+                        <h3>iPhone 15 Pro 256Gb</h3>
+                        <p class="cartItemColor">Color: Azul Titanio</p>
+                        <p class="old-price">1599,00</p>
+                        <p class="discount">7% OFF <span class="new-price">1487,07</span></p>
+                    </div>
+                    <div class="cartItemQuantity">
+                        <button class="quantityBtn" aria-label="Disminuir cantidad">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <input type="number" value="1" min="1" class="quantityInput" aria-label="Cantidad">
+                        <button class="quantityBtn" aria-label="Aumentar cantidad">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="cartItemTotal">
+                        <p class="new-price">$1487,07</p>
+                    </div>
+                    <div class="cartItemActions">
+                        <button class="removeBtn" aria-label="Eliminar producto">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                </article>
+            </section>
+
+            <aside class="cartSummary">
+                <h2>Resumen de compra</h2>
+                <hr>
+                <div class="summaryRow">
+                    <p>Subtotal:</p>
+                    <p class="new-price">$1.676,06</p>
+                </div>
+                <div class="summaryRow">
+                    <p>Envío:</p>
+                    <p>Gratis</p>
+                </div>
+                <hr>
+                <div class="summaryRow totalRow">
+                    <p><strong>Total:</strong></p>
+                    <p class="new-price"><strong>$1.676,06</strong></p>
+                </div>
+                <button class="checkoutBtn">
+                    Finalizar Compra <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <a href="products.html" class="continueShopping">
+                    <i class="fa-solid fa-arrow-left"></i> Seguir comprando
+                </a>
+            </aside>
+        </section>
 
     </main>
 
@@ -116,5 +221,7 @@
             <p>© 2025 CellPoint · Todos los derechos reservados</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
