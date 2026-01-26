@@ -83,6 +83,37 @@
         grid-template-columns: 250px 1fr;
         align-items: start;
     }
+
+    .cartMain {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .signInContainer {
+        max-width: 600px;
+    }
+
+    .socialButtons {
+        flex-wrap: nowrap;
+    }
+
+    .cartItem {
+        grid-template-columns: 120px 1fr auto auto auto;
+        gap: 1.5rem;
+    }
+
+    .cartItemQuantity {
+        margin-top: 0;
+    }
+
+    .cartItemTotal {
+        margin-top: 0;
+        text-align: end;
+    }
+
+    .cartItemActions {
+        margin-top: 0;
+        text-align: center;
+    }
 }
 
 /*      Desktop      */
@@ -98,5 +129,14 @@
 
     .footerMain article {
         width: 13rem;
+    }
+
+    .cartMain {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .signInContainer {
+        max-width: 550px;
     }
 }
