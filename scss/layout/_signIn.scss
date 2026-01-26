@@ -1,0 +1,256 @@
+@use "../utilities/variables" as var;
+@use "../utilities/extends";
+@use "../utilities/mixins" as m;
+
+/*      SignIn      */
+
+.signInMain {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background: var.$color-blue-white;
+}
+
+.signInContainer {
+    width: 100%;
+    max-width: 500px;
+    background: var.$color-white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.signInTabs {
+    position: relative;
+}
+
+.signInTabs input[type="radio"] {
+    display: none;
+}
+
+.tabLabels {
+    display: flex;
+    background: var.$color-white;
+    border-bottom: 2px solid var.$color-blue-white;
+}
+
+.tabLabel {
+    flex: 1;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    background: var.$color-white;
+    color: var.$color-gray;
+    border: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    
+    i {
+        margin-right: 0.5rem;
+    }
+    
+    &:hover {
+        background: var.$color-blue-white;
+        color: var.$color-blue;
+    }
+}
+
+#loginTab:checked ~ .tabLabels .loginLabel,
+#registerTab:checked ~ .tabLabels .registerLabel {
+    background: var.$color-violet;
+    color: var.$color-white;
+    border-bottom: 3px solid var.$color-pink;
+}
+
+.tabContent {
+    display: none;
+    padding: 2rem;
+}
+
+#loginTab:checked ~ .loginContent,
+#registerTab:checked ~ .registerContent {
+    display: block;
+}
+
+.signInTitle {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var.$color-blue;
+}
+
+.signInSubtitle {
+    text-align: center;
+    color: var.$color-gray;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.signInForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+    label {
+        color: var.$color-blue;
+        font-weight: 500;
+        font-size: 0.9rem;
+        
+        i {
+            margin-right: 0.5rem;
+            color: var.$color-violet;
+        }
+    }
+    
+    input {
+        padding: 0.8rem;
+        border: 1px solid var.$color-gray;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+        
+        &:focus {
+            outline: none;
+            border-color: var.$color-violet;
+        }
+        
+        &::placeholder {
+            color: var.$color-gray;
+            opacity: 0.6;
+        }
+    }
+}
+
+.formOptions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.rememberMe {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var.$color-gray;
+    cursor: pointer;
+    
+    input[type="checkbox"] {
+        cursor: pointer;
+    }
+    
+    a {
+        color: var.$color-violet;
+        text-decoration: none;
+        
+        &:hover {
+            color: var.$color-pink;
+        }
+    }
+}
+
+.forgotPassword {
+    color: var.$color-violet;
+    text-decoration: none;
+    font-size: 0.9rem;
+    
+    &:hover {
+        color: var.$color-pink;
+    }
+}
+
+.signInBtn {
+    @extend %primary-btn;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    
+    i {
+        margin-left: 0.5rem;
+    }
+}
+
+.socialLogin {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var.$color-blue-white;
+}
+
+.socialDivider {
+    text-align: center;
+    color: var.$color-gray;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    position: relative;
+    
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 30%;
+        height: 1px;
+        background: var.$color-blue-white;
+    }
+    
+    &::before {
+        left: 0;
+    }
+    
+    &::after {
+        right: 0;
+    }
+}
+
+.socialButtons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.socialBtn {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid var.$color-gray;
+    border-radius: 0.5rem;
+    background: var.$color-white;
+    color: var.$color-blue;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+    
+    i {
+        margin-right: 0.5rem;
+    }
+    
+    &:hover {
+        background: var.$color-blue-white;
+        border-color: var.$color-violet;
+    }
+}
+
+.googleBtn:hover {
+    background: #f5f5f5;
+    border-color: #4285f4;
+    color: #4285f4;
+}
+
+.facebookBtn:hover {
+    background: #f5f5f5;
+    border-color: #1877f2;
+    color: #1877f2;
+}
